@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View,TextInput } from 'react-native';
+import { StyleSheet, Text, View,TouchableOpacity } from 'react-native';
 import BackButtonComp from '../components/back_button_comp';
 import neutralColors from '../styles/neutralColors';
 import OtpTextInputComp from '../components/otpTextInput_comp';
+import brandColors from '../styles/brandColors';
+import ButtonComp from '../components/button_comp';
 export default function EnterCodeScreen({navigation}){
     const goBack =() =>{
         navigation.navigate('verification')
@@ -12,10 +14,15 @@ export default function EnterCodeScreen({navigation}){
            <View style={styles.innerContainer}>
                 <Text style={styles.headingText}>Enter Code</Text>
                 <Text style={styles.subHeading}>We have sent you an SMS with the code to mphomanaka91@gmail.com</Text>
-                <View>
+                <View style={styles.otpTextInputStyles}>
+                    <OtpTextInputComp placeholder={""}/>
+                    <OtpTextInputComp placeholder={""}/>
+                    <OtpTextInputComp placeholder={""}/>
                     <OtpTextInputComp placeholder={""}/>
                     <OtpTextInputComp placeholder={""}/>
                 </View>
+                <TouchableOpacity><Text style={styles.resendCodeStyle}>Resend Code</Text></TouchableOpacity>
+                <ButtonComp text={"Verify"} />
            </View>
         </View>
     );
@@ -49,4 +56,14 @@ const styles = StyleSheet.create({
         marginTop: 50,
         marginBottom: 25
     },
+    otpTextInputStyles:{
+        display: "flex",
+        flexDirection: "row",
+        
+    },
+    resendCodeStyle:{
+        marginTop: 77,
+        color: brandColors.default,
+        marginBottom: 100
+    }
 });
