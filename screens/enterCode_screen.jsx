@@ -8,6 +8,9 @@ export default function EnterCodeScreen({navigation}){
     const goBack =() =>{
         navigation.navigate('verification')
     }
+    const verifyOtp = () =>{
+        navigation.navigate('createProfile');
+    }
     return(
         <View style={styles.container}>
             <View><BackButtonComp navigate={goBack}/></View>
@@ -22,7 +25,7 @@ export default function EnterCodeScreen({navigation}){
                     <OtpTextInputComp placeholder={""}/>
                 </View>
                 <TouchableOpacity><Text style={styles.resendCodeStyle}>Resend Code</Text></TouchableOpacity>
-                <ButtonComp text={"Verify"} />
+                <ButtonComp text={"Verify"} navigate={verifyOtp}/>
            </View>
         </View>
     );
