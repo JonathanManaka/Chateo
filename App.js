@@ -4,6 +4,7 @@ import WelcomeMessageScreen from './screens/welcome_message_screen';
 import VerificationScreen from './screens/verification_screen';
 import EnterCodeScreen from './screens/enterCode_screen';
 import CreateProfileScreen from './screens/createProfile_screen';
+import ContactScreen from './screens/contacts_screen';
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -14,6 +15,8 @@ export default function App() {
           <Stack.Screen name="verification" component={VerificationScreen} options={{ headerShown: false }} />
           <Stack.Screen name="enterCode" component={EnterCodeScreen} options={{ headerShown: false }} />
           <Stack.Screen name="createProfile" component={CreateProfileScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="contacts" component={ContactScreen} options={{ headerShown: false }} />
+
         </Stack.Navigator>
     </NavigationContainer>
   );

@@ -7,6 +7,9 @@ export default function CreateProfileScreen({navigation}){
     const goBack =() =>{
         navigation.navigate('enterCode');
     }
+    const saveProfile =() =>{
+        navigation.navigate('contacts');
+    }
     return(
         <View style={styles.container}>
            <View style={styles.topHeader}>
@@ -19,7 +22,7 @@ export default function CreateProfileScreen({navigation}){
                 <View style={styles.spacer}></View>
                 <NoBorderTextInputComp placeholder={"Last Name (Optional)"} keyboardType={'default'}/>
                 <View style={styles.spacer2}></View>
-                <ButtonComp text={"Save"}/>
+                <ButtonComp text={"Save"} navigate={saveProfile}/>
            </View>
         </View>
     );
