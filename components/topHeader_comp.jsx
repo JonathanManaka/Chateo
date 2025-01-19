@@ -5,7 +5,8 @@ export default function TopHeaderComp({text, iconPath}){
         <View style={styles.headerContainer}>
             <Text style={styles.textStyle}>{text}</Text>
             <View style={styles.iconsContainer}>
-                <IconComp iconPath={iconPath}/>
+                <IconComp/>
+        
             </View>
         </View>
     );
@@ -22,7 +23,9 @@ const styles = StyleSheet.create({
 
     },
     iconsContainer:{
-        marginLeft: "auto"
+        marginLeft: "auto",
+        display: 'flex',
+        flexDirection: 'row'
     },
     textStyle:{
         fontSize: 18,

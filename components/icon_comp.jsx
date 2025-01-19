@@ -10,5 +10,7 @@ const styles = StyleSheet.create({
         width: 24,
 
     },
-   
+    iconContainer:{
+        marginRight: 50
+    }
 })
