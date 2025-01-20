@@ -66,6 +66,5 @@ const styles = StyleSheet.create({
     },
     dateMSgCountStyle:{
         marginLeft: "auto",
-       
     }
 });
