@@ -13,7 +13,7 @@ export default function TopHeaderComp({text, iconSource}){
 }
 const styles = StyleSheet.create({
     headerContainer:{
-        width: "90%",
+        width: "100%",
         height: 30,
         display: "flex",
         flexDirection: 'row',

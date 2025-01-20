@@ -10,7 +10,7 @@ export default function ContactScreen({navigation}){
         }
     
         const moreScreenNav = () =>{
-            navigation.navigate('enterCode');
+            navigation.navigate('more');
         }
     const contactsList = [<UserContactComp/>, <UserContactComp/>,<UserContactComp/>,];
     return(
@@ -25,7 +25,7 @@ export default function ContactScreen({navigation}){
                 />
                 </View>
             </View>
-            <BottomNavComp chatsNav={chatsScreenNav}/>
+            <BottomNavComp chatsNav={chatsScreenNav} moreNav={moreScreenNav}/>
         </View>
     );
 }
@@ -42,9 +42,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: "flex-start",
         marginTop: 25,
-        
-       
-        
     },
     listContainer:{
         display: 'flex',

@@ -6,6 +6,7 @@ import EnterCodeScreen from './screens/enterCode_screen';
 import CreateProfileScreen from './screens/createProfile_screen';
 import ContactScreen from './screens/contacts_screen';
 import ChatsScreen from './screens/chats_screen';
+import MoreScreen from './screens/more_screen';
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -18,6 +19,7 @@ export default function App() {
           <Stack.Screen name="createProfile" component={CreateProfileScreen} options={{ headerShown: false }} />
           <Stack.Screen name="contacts" component={ContactScreen} options={{ headerShown: false }} />
           <Stack.Screen name="chats" component={ChatsScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="more" component={MoreScreen} options={{ headerShown: false }} />
 
         </Stack.Navigator>
     </NavigationContainer>
