@@ -1,7 +1,7 @@
 import { StyleSheet, Image, TouchableOpacity } from 'react-native';
-export default function IconComp({iconPath}){
+export default function IconComp({iconSource}){
     return(
-        <TouchableOpacity style={styles.iconContainer}><Image  style={styles.iconStyle} source={require(`../assets/icons/add_icon.png`)} /></TouchableOpacity>
+        <TouchableOpacity style={styles.iconContainer}><Image  style={styles.iconStyle} source={iconSource} /></TouchableOpacity>
     );
 }
 const styles = StyleSheet.create({

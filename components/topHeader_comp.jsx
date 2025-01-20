@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native';
 import IconComp from './icon_comp';
-export default function TopHeaderComp({text, iconPath}){
+export default function TopHeaderComp({text, iconSource}){
     return(
         <View style={styles.headerContainer}>
             <Text style={styles.textStyle}>{text}</Text>
             <View style={styles.iconsContainer}>
-                <IconComp/>
+                <IconComp iconSource={iconSource}/>
         
             </View>
         </View>
@@ -13,7 +13,7 @@ export default function TopHeaderComp({text, iconPath}){
 }
 const styles = StyleSheet.create({
     headerContainer:{
-        width: "100%",
+        width: "90%",
         height: 30,
         display: "flex",
         flexDirection: 'row',

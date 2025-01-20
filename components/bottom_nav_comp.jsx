@@ -1,11 +1,12 @@
 import { StyleSheet, Text, TouchableOpacity,View,Image } from 'react-native';
 import neutralColors from '../styles/neutralColors';
-export default function BottomNavComp(){
+export default function BottomNavComp({contactNav, chatsNav, moreNav}){
+
     return(
         <View style={styles.bottomNavContainer}>
-            <TouchableOpacity style={styles.iconContainer}><Image  style={styles.iconStyle} source={require(`../assets/icons/contact_icon.png`)} /></TouchableOpacity>
-            <TouchableOpacity style={styles.iconContainer}><Image  style={styles.iconStyle} source={require(`../assets/icons/chats_icon.png`)} /></TouchableOpacity>
-            <TouchableOpacity style={styles.iconContainer}><Image  style={styles.iconStyle} source={require(`../assets/icons/more_icon.png`)} /></TouchableOpacity>
+            <TouchableOpacity onPress={contactNav} style={styles.iconContainer}><Image  style={styles.iconStyle} source={require(`../assets/icons/contact_icon.png`)} /></TouchableOpacity>
+            <TouchableOpacity onPress={chatsNav} style={styles.iconContainer}><Image  style={styles.iconStyle} source={require(`../assets/icons/chats_icon.png`)} /></TouchableOpacity>
+            <TouchableOpacity onPress={moreNav} style={styles.iconContainer}><Image  style={styles.iconStyle} source={require(`../assets/icons/more_icon.png`)} /></TouchableOpacity>
         </View>
     );
 }

@@ -3,11 +3,19 @@ import TopHeaderComp from '../components/topHeader_comp';
 import SearchTextInputComp from '../components/searchTexField_comp';
 import UserContactComp from '../components/userContact_como';
 import BottomNavComp from '../components/bottom_nav_comp';
-export default function ContactScreen(){
+import Icons from '../components/icons';
+export default function ContactScreen({navigation}){
+    const chatsScreenNav = () =>{
+            navigation.navigate('chats');
+        }
+    
+        const moreScreenNav = () =>{
+            navigation.navigate('enterCode');
+        }
     const contactsList = [<UserContactComp/>, <UserContactComp/>,<UserContactComp/>,];
     return(
         <View style={styles.container}>
-            <TopHeaderComp text={'Contact'} iconPath={'../assets/icons/add_icon.png'}/>
+            <TopHeaderComp text={'Contacts'} iconSource={Icons.addIcon}/>
             <View style={styles.bodyContainer}>
                 <SearchTextInputComp placeholder={'Search'} keyboardType={'default'}/>
                 <View style={styles.listContainer}>
@@ -17,7 +25,7 @@ export default function ContactScreen(){
                 />
                 </View>
             </View>
-            <BottomNavComp/>
+            <BottomNavComp chatsNav={chatsScreenNav}/>
         </View>
     );
 }

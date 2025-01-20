@@ -17,7 +17,7 @@ export default function SearchTextInputComp({onChange, placeholder,text,keyboard
 }
 const styles = StyleSheet.create({
     textInputStyle:{
-        width: "100%",
+        width: "90%",
         color: neutralColors.weak,
         borderRadius: 4,
         paddingLeft: 15,
