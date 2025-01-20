@@ -30,5 +30,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: neutralColors.offWhite,
      
+     
     }
 })
